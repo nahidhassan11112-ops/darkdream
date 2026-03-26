@@ -120,3 +120,26 @@ function whatsapp(){
 
 </body>
 </html>
+
+<script>
+const sheetURL = "https://opensheet.elk.sh/1RkjoEhpycMSKp35hH_fr3ufzge3qgtjgpONslkfV-UY/Sheet1";
+
+fetch(sheetURL)
+  .then(res => res.json())
+  .then(data => {
+    let html = "";
+
+    data.forEach(item => {
+      html += `
+        <div class="product-card">
+          <img src="${item.Image}" alt="${item.Name}">
+          <h3>${item.Name}</h3>
+          <p>${item.Price}৳</p>
+          <button>Buy Now</button>
+        </div>
+      `;
+    });
+
+    document.getElementById("products").innerHTML = html;
+  });
+</script>
