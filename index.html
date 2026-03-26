@@ -5,32 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dark Dream</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-/* BODY */
-body {
+body{
   margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#000,#111);
+  font-family:Poppins;
+  background:#0b0b0b;
   color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
   display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
-  background:rgba(0,0,0,0.8);
-  backdrop-filter:blur(10px);
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:black;
 }
-
-.logo{
-  font-size:30px;
-  font-weight:900;
-  background:linear-gradient(90deg,#ff0000,#ff4d4d);
-  -webkit-background-clip:text;
-  color:transparent;
+nav a{
+  color:white;
+  text-decoration:none;
 }
 
 /* HERO */
@@ -38,87 +34,47 @@ nav{
   text-align:center;
   padding:60px 20px;
 }
-
 .hero h1{
-  font-size:40px;
-  margin-bottom:10px;
+  color:red;
+  font-size:32px;
 }
-
-.hero p{
-  color:#ccc;
-}
-
-.hero button{
-  margin-top:15px;
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(90deg,#ff0000,#ff4d4d);
+.btn{
+  background:red;
+  padding:10px 20px;
+  border-radius:25px;
   color:white;
-  font-size:16px;
+  display:inline-block;
+  margin-top:10px;
 }
 
-/* PRODUCTS GRID */
+/* PRODUCTS */
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  display:flex;
   gap:20px;
   padding:20px;
 }
-
-/* CARD */
 .card{
-  background:rgba(255,255,255,0.05);
-  border-radius:15px;
+  background:#111;
+  border-radius:10px;
   overflow:hidden;
-  backdrop-filter:blur(15px);
-  transition:0.4s;
-}
-
-.card:hover{
-  transform:translateY(-10px) scale(1.05);
-  box-shadow:0 0 25px rgba(255,0,0,0.6);
-}
-
-/* IMAGE */
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-/* BODY */
-.card-body{
-  padding:15px;
+  flex:1;
   text-align:center;
 }
-
-.price{
-  color:#ff4d4d;
-  font-weight:bold;
+.card img{
+  width:100%;
 }
-
-/* BUTTON */
 .buy{
-  margin-top:10px;
-  background:#ff0000;
-  border:none;
-  padding:10px 20px;
+  background:red;
+  padding:8px 15px;
   border-radius:20px;
-  color:white;
-  transition:0.3s;
-}
-
-.buy:hover{
-  background:#ff4d4d;
-  transform:scale(1.1);
+  display:inline-block;
+  margin:10px;
 }
 
 /* CONTACT */
 .contact{
   text-align:center;
   padding:30px;
-  background:#111;
 }
 
 </style>
@@ -126,119 +82,40 @@ nav{
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <div class="logo">DARK DREAM</div>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Contact</a>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <h1>🔥 DARK DREAM 🔥</h1>
   <p>Luxury Leather & Attar Brand</p>
-  <button onclick="whatsapp()">Order Now</button>
+  <div class="btn">Order Now</div>
 </div>
 
-<!-- PRODUCTS -->
-<div class="products" id="products"></div>
+<div class="products">
 
-<!-- CONTACT -->
+  <div class="card">
+    <img src="https://picsum.photos/400/300?random=1">
+    <h3>Wallet</h3>
+    <p>1200৳</p>
+    <div class="buy">Buy Now</div>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/400/300?random=2">
+    <h3>Attar</h3>
+    <p>500৳</p>
+    <div class="buy">Buy Now</div>
+  </div>
+
+</div>
+
 <div class="contact">
-  📞 01871480009 <br>
-  ✉ darkdream046@gmail.com <br><br>
-
-  <button class="buy" onclick="whatsapp()">Chat on WhatsApp</button>
+  <p>📞 01871480009</p>
+  <p>📧 darkdream046@gmail.com</p>
 </div>
-
-<script>
-const sheetURL="https://opensheet.elk.sh/1RkjoEhpycMSKp35hH_fr3ufzge3qgtjgpONslkfV-UY/Sheet1";
-
-fetch(sheetURL)
-.then(res=>res.json())
-.then(data=>{
-  let html="";
-  data.forEach(item=>{
-    html+=`
-    <div class="card">
-      <img src="${item.Image}">
-      <div class="card-body">
-        <h3>${item.Name}</h3>
-        <p class="price">${item.Price}৳</p>
-        <a href="https://wa.me/8801871480009?text=I want ${item.Name}">
-          <button class="buy">Buy Now</button>
-        </a>
-      </div>
-    </div>
-    `;
-  });
-  document.getElementById("products").innerHTML=html;
-});
-
-function whatsapp(){
-  window.open("https://wa.me/8801871480009");
-}
-</script>
 
 </body>
 </html>
-
-<a href="https://wa.me/8801871480009" class="float">
-  💬
-</a>
-
-.float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  font-size:22px;
-  padding:15px;
-  border-radius:50%;
-  text-align:center;
-  box-shadow:0 0 10px #000;
-}
-
-.hero h1{
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow{
-  from{ text-shadow:0 0 10px red; }
-  to{ text-shadow:0 0 25px red; }
-}
-
-.card:hover{
-  transform:translateY(-10px) scale(1.05);
-  box-shadow:0 0 30px rgba(255,0,0,0.8);
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-
-<div class="hero">
-  <h1>DARK DREAM</h1>
-  <p>Luxury Leather & Attar Brand</p>
-  <button onclick="whatsapp()">Order Now</button>
-</div>
-
-.hero{
-  background:url('https://source.unsplash.com/900x400/?luxury') center/cover;
-  padding:80px 20px;
-  text-align:center;
-}
-
-.card{
-  background:#111;
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 0 15px rgba(255,0,0,0.3);
-}
-
-.buy{
-  background:red;
-  box-shadow:0 0 10px red;
-}
-
-<h2 style="text-align:center;">🔥 Our Products 🔥</h2>
