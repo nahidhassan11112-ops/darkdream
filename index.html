@@ -6,49 +6,67 @@
 <title>Dark Dream</title>
 
 <style>
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: white;
   text-align: center;
 }
 
+/* HEADER */
 h1 {
   color: #ff4d4d;
-  margin-top: 40px;
+  margin-top: 50px;
+  font-size: 32px;
+  letter-spacing: 2px;
 }
 
-p {
-  color: #ccc;
+/* TAGLINE */
+.tagline {
+  color: #bbb;
+  margin-bottom: 20px;
 }
 
+/* BUTTON */
 .btn {
-  background: #ff4d4d;
+  background: linear-gradient(45deg, #ff4d4d, #ff0000);
   color: white;
   padding: 12px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   margin: 10px;
   cursor: pointer;
   font-size: 16px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: #ff1a1a;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff4d4d;
 }
 
+/* PRODUCT SECTION */
 .products {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
+/* CARD */
 .card {
-  background: #111;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   margin: 20px auto;
-  padding: 15px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 85%;
+  max-width: 320px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255,77,77,0.5);
 }
 
 .card img {
@@ -56,6 +74,14 @@ p {
   border-radius: 10px;
 }
 
+/* PRICE */
+.price {
+  margin-top: 10px;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* FOOTER */
 footer {
   margin-top: 40px;
   padding: 15px;
@@ -63,6 +89,7 @@ footer {
   font-size: 14px;
   color: #aaa;
 }
+
 </style>
 
 </head>
@@ -70,9 +97,9 @@ footer {
 <body>
 
 <h1>🔥 DARK DREAM 🔥</h1>
-<p>Premium Leather & Attar Brand</p>
+<p class="tagline">Premium Leather & Attar Brand</p>
 
-<a href="https://wa.me/8801847678322" target="_blank">
+<a href="https://wa.me/8801847678322?text=I%20want%20to%20order" target="_blank">
   <button class="btn">Order on WhatsApp</button>
 </a>
 
@@ -81,12 +108,22 @@ footer {
 
   <div class="card">
     <img src="https://i.imgur.com/8Km9tLL.jpg">
-    <p>👜 Premium Wallet - 1200৳</p>
+    <p>👜 Premium Wallet</p>
+    <p class="price">1200৳</p>
+
+    <a href="https://wa.me/8801847678322?text=I%20want%20Premium%20Wallet" target="_blank">
+      <button class="btn">Buy Now</button>
+    </a>
   </div>
 
   <div class="card">
     <img src="https://i.imgur.com/3ZQ3Z6G.jpg">
-    <p>🌿 Attar - 500৳</p>
+    <p>🌿 Attar</p>
+    <p class="price">500৳</p>
+
+    <a href="https://wa.me/8801847678322?text=I%20want%20Attar" target="_blank">
+      <button class="btn">Buy Now</button>
+    </a>
   </div>
 
 </div>
