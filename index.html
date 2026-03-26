@@ -2,60 +2,89 @@
 <html>
 <head>
   <title>Dark Dream</title>
+
   <style>
     body {
+      margin: 0;
+      font-family: Arial;
       background: black;
       color: white;
       text-align: center;
-      font-family: Arial;
-      padding: 50px;
     }
 
-    h1 {
-      font-size: 40px;
+    header {
+      padding: 20px;
+      font-size: 28px;
       color: #ff4d4d;
     }
 
-    p {
-      font-size: 18px;
-      color: #ccc;
+    .hero {
+      padding: 40px 20px;
     }
 
     .btn {
-      margin-top: 20px;
       padding: 12px 25px;
       background: #ff4d4d;
       color: white;
       border: none;
       border-radius: 5px;
+      margin: 10px;
+    }
+
+    .products {
+      padding: 30px;
+    }
+
+    .card {
+      background: #111;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background: #111;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>🔥 DARK DREAM 🔥</h1>
+<header>🔥 DARK DREAM 🔥</header>
+
+<div class="hero">
   <p>Premium Leather & Attar Brand</p>
 
-  <button class="btn">Shop Now</button>
+  <a href="https://wa.me/8801847678322">
+    <button class="btn">Order on WhatsApp</button>
+  </a>
+</div>
 
-  <a href="https://wa.me/8801847678322" target="_blank">
-  <button class="btn">Order on WhatsApp</button>
-</a>
+<div class="products">
+  <h2>Our Products</h2>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
+    <p>👜 Premium Wallet - 1200৳</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+    <p>🌿 Attar - 500৳</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 Dark Dream | All Rights Reserved
+</footer>
 
 </body>
-
 </html>
-
-<h2>Our Products</h2>
-
-<img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb" width="200">
-<p>👜 Premium Wallet - 1200৳</p>
-
-<img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30" width="200">
-<p>🌿 Attar - 500৳</p>
-
-img {
-  border-radius: 10px;
-  margin-top: 10px;
-}
