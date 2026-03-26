@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,41 +37,29 @@ width:55%;
 margin:10px;
 background:#000;
 color:white;
-padding:30px;
+padding:25px;
 border-radius:15px;
 text-align:center;
 }
-.tagline{
-color:#ff3c3c;
-font-weight:bold;
-margin-top:10px;
+
+/* SECTION */
+.section{
+padding:10px;
+}
+.section h2{
+margin-bottom:10px;
 }
 
-/* CATEGORY */
-.categories{
+/* PRODUCT GRID */
+.grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:10px;
-padding:10px;
-}
-.cat{
-background:white;
-padding:12px;
-border-radius:12px;
-text-align:center;
-font-size:12px;
-font-weight:bold;
-}
-
-/* PRODUCTS */
-.products{
-padding:10px;
 }
 .card{
 background:white;
 padding:10px;
-border-radius:15px;
-margin-bottom:15px;
+border-radius:12px;
 }
 .card img{
 width:100%;
@@ -106,46 +95,88 @@ box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 
 <!-- BANNER -->
 <div class="banner">
-<h2>Premium Gadget, Accessories & Sports Store</h2>
-<p class="tagline">Accessories For Every Connection 🔥</p>
+<h2>All-in-One Shopping Platform</h2>
+<p>Accessories For Every Connection 🔥</p>
 </div>
 
-<!-- CATEGORY -->
-<div class="categories">
-
-<div class="cat">📱 Mobile</div>
-<div class="cat">🎧 Accessories</div>
-<div class="cat">🔌 Gadgets</div>
-<div class="cat">⌚ Smart Watch</div>
-
-<div class="cat">🎮 Gaming</div>
-<div class="cat">🏏 Sports</div>
-<div class="cat">⚽ Fitness</div>
-<div class="cat">🎒 Gear</div>
-
-</div>
-
-<!-- PRODUCTS -->
-<div class="products">
+<!-- MOBILE ACCESSORIES -->
+<div class="section">
+<h2>📱 Mobile Accessories</h2>
+<div class="grid">
 
 <div class="card">
-<img src="https://picsum.photos/400/300?1">
-<h3>Power Bank</h3>
+<img src="https://picsum.photos/300/200?1">
+<p>Power Bank</p>
 <p class="price">1500৳</p>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/400/300?2">
-<h3>Wireless Earbuds</h3>
+<img src="https://picsum.photos/300/200?2">
+<p>Earbuds</p>
 <p class="price">2200৳</p>
 </div>
 
+</div>
+</div>
+
+<!-- SPORTS -->
+<div class="section">
+<h2>🏏 Sports</h2>
+<div class="grid">
+
 <div class="card">
-<img src="https://picsum.photos/400/300?3">
-<h3>Cricket Bat</h3>
+<img src="https://picsum.photos/300/200?3">
+<p>Cricket Bat</p>
 <p class="price">3500৳</p>
 </div>
 
+<div class="card">
+<img src="https://picsum.photos/300/200?4">
+<p>Football</p>
+<p class="price">1200৳</p>
+</div>
+
+</div>
+</div>
+
+<!-- LEATHER -->
+<div class="section">
+<h2>👜 Leather</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?5">
+<p>Wallet</p>
+<p class="price">1200৳</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?6">
+<p>Leather Belt</p>
+<p class="price">900৳</p>
+</div>
+
+</div>
+</div>
+
+<!-- PERFUME -->
+<div class="section">
+<h2>🌿 Perfume / Attar</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?7">
+<p>Luxury Attar</p>
+<p class="price">500৳</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?8">
+<p>Premium Perfume</p>
+<p class="price">1800৳</p>
+</div>
+
+</div>
 </div>
 
 <!-- FOOTER -->
