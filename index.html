@@ -1,190 +1,125 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dark Dream</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Attar</title>
 
-<style>
-body{
-margin:0;
-font-family:sans-serif;
-background:#f5f5f5;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
 
-/* HEADER */
-.header{
-background:#111;
-color:white;
-padding:15px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-.logo{
-font-size:20px;
-font-weight:bold;
-}
-.search{
-padding:8px;
-border-radius:10px;
-border:none;
-width:55%;
-}
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+    }
 
-/* BANNER */
-.banner{
-margin:10px;
-background:#000;
-color:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
+    h1 {
+      text-align: center;
+      color: #222;
+    }
 
-/* SECTION */
-.section{
-padding:10px;
-}
-.section h2{
-margin-bottom:10px;
-}
+    .hero {
+      text-align: center;
+      padding: 20px;
+    }
 
-/* PRODUCT GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-.card{
-background:white;
-padding:10px;
-border-radius:12px;
-}
-.card img{
-width:100%;
-border-radius:10px;
-}
-.price{
-color:red;
-font-weight:bold;
-}
+    .hero img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-/* FOOTER */
-.footer{
-position:fixed;
-bottom:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:space-around;
-padding:10px;
-box-shadow:0 -2px 10px rgba(0,0,0,0.1);
-}
-</style>
+    .price {
+      font-size: 24px;
+      color: green;
+      margin: 10px 0;
+    }
 
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .benefits li {
+      margin: 10px 0;
+    }
+
+    .review {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-<div class="logo">🔥 Dark Dream</div>
-<input class="search" placeholder="Search products...">
-</div>
+<div class="container">
 
-<!-- BANNER -->
-<div class="banner">
-<h2>All-in-One Shopping Platform</h2>
-<p>Accessories For Every Connection 🔥</p>
-</div>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Premium Attar - Long Lasting Fragrance</h1>
+    <img src="https://via.placeholder.com/800x300" alt="Attar">
+    <p class="price">Only 999৳</p>
+    <a class="btn" href="https://wa.me/8801XXXXXXXXX">Order Now</a>
+  </div>
 
-<!-- MOBILE ACCESSORIES -->
-<div class="section">
-<h2>📱 Mobile Accessories</h2>
-<div class="grid">
+  <!-- Benefits -->
+  <div class="section">
+    <h2>Why Choose Our Attar?</h2>
+    <ul class="benefits">
+      <li>✔ Long lasting smell</li>
+      <li>✔ Alcohol free</li>
+      <li>✔ Premium quality</li>
+      <li>✔ Best for daily use</li>
+    </ul>
+  </div>
 
-<div class="card">
-<img src="https://picsum.photos/300/200?1">
-<p>Power Bank</p>
-<p class="price">1500৳</p>
-</div>
+  <!-- Reviews -->
+  <div class="section">
+    <h2>Customer Reviews</h2>
 
-<div class="card">
-<img src="https://picsum.photos/300/200?2">
-<p>Earbuds</p>
-<p class="price">2200৳</p>
-</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ - "Amazing fragrance!"</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ - "Very long lasting"</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ - "Best in this price"</div>
 
-</div>
-</div>
+  </div>
 
-<!-- SPORTS -->
-<div class="section">
-<h2>🏏 Sports</h2>
-<div class="grid">
+  <!-- CTA -->
+  <div class="section" style="text-align:center;">
+    <h2>Order Now</h2>
+    <a class="btn" href="https://wa.me/8801XXXXXXXXX">Order via WhatsApp</a>
+  </div>
 
-<div class="card">
-<img src="https://picsum.photos/300/200?3">
-<p>Cricket Bat</p>
-<p class="price">3500৳</p>
-</div>
+  <footer>
+    © 2026 Premium Attar. All rights reserved.
+  </footer>
 
-<div class="card">
-<img src="https://picsum.photos/300/200?4">
-<p>Football</p>
-<p class="price">1200৳</p>
-</div>
-
-</div>
-</div>
-
-<!-- LEATHER -->
-<div class="section">
-<h2>👜 Leather</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://picsum.photos/300/200?5">
-<p>Wallet</p>
-<p class="price">1200৳</p>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/200?6">
-<p>Leather Belt</p>
-<p class="price">900৳</p>
-</div>
-
-</div>
-</div>
-
-<!-- PERFUME -->
-<div class="section">
-<h2>🌿 Perfume / Attar</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://picsum.photos/300/200?7">
-<p>Luxury Attar</p>
-<p class="price">500৳</p>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/200?8">
-<p>Premium Perfume</p>
-<p class="price">1800৳</p>
-</div>
-
-</div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-<div>🏠</div>
-<div>🛒</div>
-<div>👤</div>
-<div>📍</div>
 </div>
 
 </body>
