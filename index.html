@@ -2,87 +2,178 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dark Dream</title>
+<title>Dark Dream Store</title>
 
 <style>
-body{margin:0;background:#0a0a0a;color:white;font-family:sans-serif}
+body{margin:0;background:#0f0f0f;color:white;font-family:sans-serif}
 
 /* HEADER */
-header{display:flex;justify-content:space-between;padding:15px;background:#111}
-header h2{color:red}
-
-/* HERO */
-.hero{text-align:center;padding:40px}
-.btn{
-  background:red;
-  padding:12px 25px;
-  border-radius:20px;
-  display:inline-block;
-  margin-top:10px;
-  cursor:pointer;
+.header{
+display:flex;
+padding:10px;
+background:#111;
+align-items:center;
+gap:10px;
+}
+.logo{font-size:22px;font-weight:bold}
+.search{
+flex:1;
+padding:10px;
+border-radius:10px;
+border:none;
 }
 
+/* MENU BUTTON */
+.menu-btn{
+font-size:22px;
+cursor:pointer;
+}
+
+/* SIDEBAR */
+.sidebar{
+position:fixed;
+top:0;
+left:-250px;
+width:250px;
+height:100%;
+background:#fff;
+color:#000;
+padding:20px;
+transition:0.3s;
+z-index:1000;
+}
+.sidebar h3{margin-top:20px}
+.sidebar.active{left:0}
+
+/* HERO */
+.hero{
+padding:20px;
+text-align:center;
+}
+.hero h1{color:red}
+
 /* GRID */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
-.card{background:#111;border-radius:10px;overflow:hidden;text-align:center}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+padding:10px;
+}
+.card{
+background:#1a1a1a;
+border-radius:10px;
+overflow:hidden;
+text-align:center;
+}
 .card img{width:100%}
-.price{color:red}
+.price{color:#00ff88}
 
 /* BUTTON */
 button{
-  background:red;
-  border:none;
-  padding:10px;
-  border-radius:20px;
-  color:white;
-  margin-bottom:10px;
-  cursor:pointer;
+background:red;
+color:white;
+border:none;
+padding:10px;
+border-radius:20px;
+margin-bottom:10px;
 }
+
+/* BOTTOM NAV */
+.nav{
+position:fixed;
+bottom:0;
+width:100%;
+background:#111;
+display:flex;
+justify-content:space-around;
+padding:10px;
+}
+.nav div{font-size:12px;text-align:center}
 </style>
 </head>
 
 <body>
 
-<header>
-<h2>DARK DREAM</h2>
-</header>
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+<h2>All Category</h2>
+<h3>Mobile Accessories</h3>
+<h3>Sports</h3>
+<h3>Leather</h3>
+<h3>Perfume</h3>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="logo">Dark Dream</div>
+<input class="search" placeholder="Search product">
+</div>
 
 <!-- HERO -->
 <div class="hero">
 <h1>Accessories For Every Connection</h1>
-<div class="btn" onclick="goProducts()">Shop Now</div>
 </div>
 
 <!-- PRODUCTS -->
-<div id="products" class="grid">
+<div class="grid">
 
 <div class="card">
 <img src="https://picsum.photos/300?1">
-<h3>Charger</h3>
-<p class="price">500৳</p>
-<button onclick="order('Charger',500)">Buy Now</button>
+<h3>Earbuds</h3>
+<p class="price">1500৳</p>
+<button onclick="addCart('Earbuds')">Add to Cart</button>
 </div>
 
 <div class="card">
 <img src="https://picsum.photos/300?2">
-<h3>Wallet</h3>
-<p class="price">1200৳</p>
-<button onclick="order('Wallet',1200)">Buy Now</button>
+<h3>Football</h3>
+<p class="price">800৳</p>
+<button onclick="addCart('Football')">Add to Cart</button>
 </div>
 
+<div class="card">
+<img src="https://picsum.photos/300?3">
+<h3>Leather Wallet</h3>
+<p class="price">1200৳</p>
+<button onclick="addCart('Wallet')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?4">
+<h3>Attar Perfume</h3>
+<p class="price">500৳</p>
+<button onclick="addCart('Perfume')">Add to Cart</button>
+</div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="nav">
+<div>🏠<br>Home</div>
+<div onclick="showCart()">🛒<br>Cart</div>
+<div>👤<br>Profile</div>
+<div>📦<br>Order</div>
 </div>
 
 <script>
 
-// BUY NOW → WhatsApp order
-function order(name,price){
-  let msg = `Order Details:%0AProduct: ${name}%0APrice: ${price}৳`;
-  window.open(`https://wa.me/8801871480009?text=${msg}`);
+let cart=[];
+
+// MENU
+function toggleMenu(){
+document.getElementById("sidebar").classList.toggle("active");
 }
 
-// SHOP NOW → scroll to products
-function goProducts(){
-  document.getElementById("products").scrollIntoView({behavior:"smooth"});
+// ADD CART
+function addCart(item){
+cart.push(item);
+alert(item+" added to cart");
+}
+
+// SHOW CART
+function showCart(){
+alert("Cart Items:\n"+cart.join("\n"));
 }
 
 </script>
