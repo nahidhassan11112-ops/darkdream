@@ -3,131 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BelieveMe Style Landing</title>
+<title>Dark Dream</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f8f8f8;
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0a0a0a;
+  color:white;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#111;
+}
+nav h2{color:red;}
+nav input{
+  width:60%;
+  padding:8px;
+  border-radius:5px;
+  border:none;
 }
 
-/* Header */
-.header {
-  text-align: center;
+/* HERO */
+.hero{
+  background:url('https://picsum.photos/900/400?blur=2') center/cover;
+  padding:60px 20px;
+  text-align:center;
 }
-.header img {
-  width: 100%;
-  border-radius: 10px;
+.hero h1{
+  font-size:30px;
+  color:red;
 }
-
-/* Title */
-h1 {
-  font-size: 24px;
-  text-align: center;
-}
-
-/* Price */
-.price {
-  text-align: center;
-  font-size: 22px;
-  color: green;
-  margin: 10px 0;
+.btn{
+  background:red;
+  padding:12px 25px;
+  border-radius:25px;
+  display:inline-block;
+  margin-top:10px;
 }
 
-/* Button */
-.btn {
-  display: block;
-  text-align: center;
-  background: #ff4d4d;
-  color: white;
-  padding: 15px;
-  margin: 15px 0;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
+/* CATEGORY */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  padding:20px;
+}
+.cat{
+  background:#111;
+  padding:15px;
+  text-align:center;
+  border-radius:10px;
 }
 
-/* Section */
-.section {
-  margin-top: 25px;
+/* PRODUCTS */
+.products{
+  padding:20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.card{
+  background:#111;
+  border-radius:10px;
+  overflow:hidden;
+}
+.card img{width:100%;}
+.card h3{padding:10px;}
+.price{color:red; padding:0 10px;}
+.buy{
+  background:red;
+  text-align:center;
+  margin:10px;
+  padding:8px;
+  border-radius:20px;
 }
 
-/* Features */
-.features li {
-  margin: 8px 0;
+/* OFFER */
+.offer{
+  background:#222;
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
 }
 
-/* Review */
-.review {
-  background: #eee;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 5px;
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#aaa;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  color: #777;
+@media(max-width:600px){
+  .categories{grid-template-columns:repeat(2,1fr);}
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAV -->
+<nav>
+<h2>DARK DREAM</h2>
+<input placeholder="Search product...">
+</nav>
 
-  <!-- Image -->
-  <div class="header">
-    <img src="https://via.placeholder.com/800x400" alt="Product">
-  </div>
-
-  <!-- Title -->
-  <h1>Premium Product Offer</h1>
-
-  <!-- Price -->
-  <div class="price">Only 999৳</div>
-
-  <!-- Button -->
-  <a class="btn" href="https://wa.me/8801XXXXXXXXX">Order Now</a>
-
-  <!-- Features -->
-  <div class="section">
-    <h2>Product Features</h2>
-    <ul class="features">
-      <li>✔ High Quality</li>
-      <li>✔ Long Lasting</li>
-      <li>✔ Best Price</li>
-      <li>✔ Fast Delivery</li>
-    </ul>
-  </div>
-
-  <!-- Reviews -->
-  <div class="section">
-    <h2>Customer Reviews</h2>
-    <div class="review">⭐⭐⭐⭐⭐ - Awesome product!</div>
-    <div class="review">⭐⭐⭐⭐⭐ - Value for money</div>
-    <div class="review">⭐⭐⭐⭐⭐ - Highly recommended</div>
-  </div>
-
-  <!-- CTA -->
-  <a class="btn" href="https://wa.me/8801XXXXXXXXX">Order via WhatsApp</a>
-
-  <footer>
-    © 2026 All Rights Reserved
-  </footer>
-
+<!-- HERO -->
+<div class="hero">
+<h1>Accessories For Every Connection</h1>
+<p>All in one premium store</p>
+<div class="btn">Shop Now</div>
 </div>
+
+<!-- CATEGORY -->
+<div class="categories">
+<div class="cat">📱 Mobile</div>
+<div class="cat">🏏 Sports</div>
+<div class="cat">👝 Leather</div>
+<div class="cat">🌿 Perfume</div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+<h2>🔥 Trending Products</h2>
+
+<div class="grid">
+<div class="card">
+<img src="https://picsum.photos/300?1">
+<h3>Charger</h3>
+<p class="price">500৳</p>
+<div class="buy">Buy Now</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?2">
+<h3>Earbuds</h3>
+<p class="price">1200৳</p>
+<div class="buy">Buy Now</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?3">
+<h3>Football</h3>
+<p class="price">800৳</p>
+<div class="buy">Buy Now</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?4">
+<h3>Wallet</h3>
+<p class="price">1200৳</p>
+<div class="buy">Buy Now</div>
+</div>
+</div>
+</div>
+
+<!-- OFFER -->
+<div class="offer">
+<h2>🔥 Special Offer</h2>
+<p>Up to 50% discount on selected products</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+📞 01871480009 <br>
+📧 darkdream046@gmail.com <br><br>
+© 2026 Dark Dream
+</footer>
 
 </body>
 </html>
