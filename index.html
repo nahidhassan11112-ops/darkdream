@@ -1,185 +1,3 @@
-I'm<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dark Dream</title>
-
-<style>
-body{
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#0a0a0a;
-  color:white;
-}
-
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px;
-  background:#111;
-}
-nav h2{color:red;}
-nav input{
-  width:60%;
-  padding:8px;
-  border-radius:5px;
-  border:none;
-}
-
-/* HERO */
-.hero{
-  background:url('https://picsum.photos/900/400?blur=2') center/cover;
-  padding:60px 20px;
-  text-align:center;
-}
-.hero h1{
-  font-size:30px;
-  color:red;
-}
-.btn{
-  background:red;
-  padding:12px 25px;
-  border-radius:25px;
-  display:inline-block;
-  margin-top:10px;
-}
-
-/* CATEGORY */
-.categories{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  padding:20px;
-}
-.cat{
-  background:#111;
-  padding:15px;
-  text-align:center;
-  border-radius:10px;
-}
-
-/* PRODUCTS */
-.products{
-  padding:20px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-.card{
-  background:#111;
-  border-radius:10px;
-  overflow:hidden;
-}
-.card img{width:100%;}
-.card h3{padding:10px;}
-.price{color:red; padding:0 10px;}
-.buy{
-  background:red;
-  text-align:center;
-  margin:10px;
-  padding:8px;
-  border-radius:20px;
-}
-
-/* OFFER */
-.offer{
-  background:#222;
-  margin:20px;
-  padding:20px;
-  border-radius:15px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  color:#aaa;
-}
-
-@media(max-width:600px){
-  .categories{grid-template-columns:repeat(2,1fr);}
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAV -->
-<nav>
-<h2>DARK DREAM</h2>
-<input placeholder="Search product...">
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-<h1>Accessories For Every Connection</h1>
-<p>All in one premium store</p>
-<div class="btn">Shop Now</div>
-</div>
-
-<!-- CATEGORY -->
-<div class="categories">
-<div class="cat">📱 Mobile</div>
-<div class="cat">🏏 Sports</div>
-<div class="cat">👝 Leather</div>
-<div class="cat">🌿 Perfume</div>
-</div>
-
-<!-- PRODUCTS -->
-<div class="products">
-<h2>🔥 Trending Products</h2>
-
-<div class="grid">
-<div class="card">
-<img src="https://picsum.photos/300?1">
-<h3>Charger</h3>
-<p class="price">500৳</p>
-<div class="buy">Buy Now</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300?2">
-<h3>Earbuds</h3>
-<p class="price">1200৳</p>
-<div class="buy">Buy Now</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300?3">
-<h3>Football</h3>
-<p class="price">800৳</p>
-<div class="buy">Buy Now</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300?4">
-<h3>Wallet</h3>
-<p class="price">1200৳</p>
-<div class="buy">Buy Now</div>
-</div>
-</div>
-</div>
-
-<!-- OFFER -->
-<div class="offer">
-<h2>🔥 Special Offer</h2>
-<p>Up to 50% discount on selected products</p>
-</div>
-
-<!-- FOOTER -->
-<footer>
-📞 01871480009 <br>
-📧 darkdream046@gmail.com <br><br>
-© 2026 Dark Dream
-</footer>
-
-</body>
-</html>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -195,7 +13,14 @@ header h2{color:red}
 
 /* HERO */
 .hero{text-align:center;padding:40px}
-.btn{background:red;padding:10px 20px;border-radius:20px}
+.btn{
+  background:red;
+  padding:12px 25px;
+  border-radius:20px;
+  display:inline-block;
+  margin-top:10px;
+  cursor:pointer;
+}
 
 /* GRID */
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
@@ -203,14 +28,16 @@ header h2{color:red}
 .card img{width:100%}
 .price{color:red}
 
-/* CART */
-.cart{position:fixed;bottom:20px;right:20px;background:red;padding:15px;border-radius:50%}
-
-/* ADMIN */
-.admin{display:none;padding:20px}
-input{padding:10px;margin:5px;width:90%}
-button{padding:10px;background:red;color:white;border:none}
-
+/* BUTTON */
+button{
+  background:red;
+  border:none;
+  padding:10px;
+  border-radius:20px;
+  color:white;
+  margin-bottom:10px;
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -218,48 +45,46 @@ button{padding:10px;background:red;color:white;border:none}
 
 <header>
 <h2>DARK DREAM</h2>
-<button onclick="showAdmin()">Admin</button>
 </header>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Accessories For Every Connection</h1>
+<div class="btn" onclick="goProducts()">Shop Now</div>
 </div>
 
-<div class="grid">
+<!-- PRODUCTS -->
+<div id="products" class="grid">
 
 <div class="card">
 <img src="https://picsum.photos/300?1">
 <h3>Charger</h3>
 <p class="price">500৳</p>
-<button onclick="order('Charger',500)">Buy</button>
+<button onclick="order('Charger',500)">Buy Now</button>
 </div>
 
 <div class="card">
 <img src="https://picsum.photos/300?2">
 <h3>Wallet</h3>
 <p class="price">1200৳</p>
-<button onclick="order('Wallet',1200)">Buy</button>
+<button onclick="order('Wallet',1200)">Buy Now</button>
 </div>
 
-</div>
-
-<!-- ADMIN PANEL -->
-<div class="admin" id="admin">
-<h2>Admin Panel</h2>
-<input placeholder="Product Name">
-<input placeholder="Price">
-<button>Add Product</button>
 </div>
 
 <script>
+
+// BUY NOW → WhatsApp order
 function order(name,price){
-  let msg = `Order:\nProduct: ${name}\nPrice: ${price}৳`;
-  window.open("https://wa.me/8801871480009?text="+encodeURIComponent(msg));
+  let msg = `Order Details:%0AProduct: ${name}%0APrice: ${price}৳`;
+  window.open(`https://wa.me/8801871480009?text=${msg}`);
 }
 
-function showAdmin(){
-  document.getElementById("admin").style.display="block";
+// SHOP NOW → scroll to products
+function goProducts(){
+  document.getElementById("products").scrollIntoView({behavior:"smooth"});
 }
+
 </script>
 
 </body>
