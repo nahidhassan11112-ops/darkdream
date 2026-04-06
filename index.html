@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+I'm<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -176,6 +176,91 @@ footer{
 📧 darkdream046@gmail.com <br><br>
 © 2026 Dark Dream
 </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Dream</title>
+
+<style>
+body{margin:0;background:#0a0a0a;color:white;font-family:sans-serif}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;padding:15px;background:#111}
+header h2{color:red}
+
+/* HERO */
+.hero{text-align:center;padding:40px}
+.btn{background:red;padding:10px 20px;border-radius:20px}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
+.card{background:#111;border-radius:10px;overflow:hidden;text-align:center}
+.card img{width:100%}
+.price{color:red}
+
+/* CART */
+.cart{position:fixed;bottom:20px;right:20px;background:red;padding:15px;border-radius:50%}
+
+/* ADMIN */
+.admin{display:none;padding:20px}
+input{padding:10px;margin:5px;width:90%}
+button{padding:10px;background:red;color:white;border:none}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>DARK DREAM</h2>
+<button onclick="showAdmin()">Admin</button>
+</header>
+
+<div class="hero">
+<h1>Accessories For Every Connection</h1>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://picsum.photos/300?1">
+<h3>Charger</h3>
+<p class="price">500৳</p>
+<button onclick="order('Charger',500)">Buy</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?2">
+<h3>Wallet</h3>
+<p class="price">1200৳</p>
+<button onclick="order('Wallet',1200)">Buy</button>
+</div>
+
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin" id="admin">
+<h2>Admin Panel</h2>
+<input placeholder="Product Name">
+<input placeholder="Price">
+<button>Add Product</button>
+</div>
+
+<script>
+function order(name,price){
+  let msg = `Order:\nProduct: ${name}\nPrice: ${price}৳`;
+  window.open("https://wa.me/8801871480009?text="+encodeURIComponent(msg));
+}
+
+function showAdmin(){
+  document.getElementById("admin").style.display="block";
+}
+</script>
 
 </body>
 </html>
